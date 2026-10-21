@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(145deg,#180511,#64143d,#21091f);
+  background: linear-gradient(135deg,#190615,#70183f,#290b28);
   color: white;
   font-family: Georgia,serif;
   text-align: center;
@@ -25,11 +25,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 25px;
+  padding: 20px;
 }
 
 h1 {
-  color: #ffb5d4;
+  color: #ffb6d7;
   text-shadow: 0 0 18px #ff3988;
 }
 
@@ -37,17 +37,17 @@ input {
   width: 260px;
   max-width: 90%;
   padding: 14px;
-  border: 1px solid #ff8fbe;
+  border: none;
   border-radius: 25px;
   text-align: center;
-  margin: 12px;
   font-size: 16px;
+  margin: 12px;
 }
 
 button {
+  padding: 13px 28px;
   border: none;
   border-radius: 25px;
-  padding: 13px 28px;
   background: #ff3988;
   color: white;
   font-size: 16px;
@@ -62,17 +62,36 @@ main {
 
 .card {
   background: #ffffff0c;
-  border: 1px solid #ff91bf55;
+  border: 1px solid #ff91bf66;
   border-radius: 22px;
-  padding: 25px 16px;
+  padding: 24px 16px;
   margin: 22px 0;
   box-shadow: 0 0 20px #ff398822;
 }
 
+/* ÖZEL GÜN SAYACI KUTUSU */
 .counter {
-  color: #ffc2dd;
-  font-size: 23px;
+  background: linear-gradient(135deg,#4b1238,#8f2458);
+  border: 2px solid #ff8fbe;
+  border-radius: 22px;
+  padding: 22px 12px;
+  margin: 20px auto;
+  max-width: 420px;
+  box-shadow: 0 0 20px #ff398855;
+  color: #ffd5e7;
+  font-size: 22px;
   line-height: 1.8;
+}
+
+#days {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#clock {
+  font-size: 15px;
+  color: #ffc2dd;
 }
 
 .poem {
@@ -88,14 +107,17 @@ main {
 }
 
 .photos img {
+  display: block;
   width: 100%;
-  border-radius: 15px;
+  height: 240px;
   object-fit: cover;
+  border-radius: 15px;
+  background: #351328;
 }
 
 .heart {
   position: fixed;
-  bottom: -35px;
+  bottom: -30px;
   pointer-events: none;
   animation: rise 6s linear forwards;
 }
@@ -119,12 +141,11 @@ footer {
 <section class="login" id="login">
   <div style="font-size:65px">❤️</div>
   <h1>Bir Ömür Boyu</h1>
-  <p>Bu dünya sadece ikimize ait...</p>
+  <p>Sadece sana ait bir dünya...</p>
 
   <form id="loginForm">
     <input id="password" type="password"
-      placeholder="Özel şifremizi gir..."
-      autocomplete="off" required>
+      placeholder="Şifremizi gir..." required>
     <br>
     <button type="submit">Kalbime Gir ❤️</button>
   </form>
@@ -135,19 +156,22 @@ footer {
 <main id="content" class="hidden">
 
   <h1>Hoş Geldin, Bir Tanem ❤️</h1>
-  <p>Sen benim en güzel hikâyemsin.</p>
+  <p>Bu hikâyenin en güzel yanı sensin.</p>
 
   <section class="card">
     <h2>Birlikte Geçen Zamanımız ⏳</h2>
+
     <div class="counter">
       <div id="days">730 gündür beraberiz ❤️</div>
-      <div id="clock"></div>
+      <div id="clock">00 saat 00 dakika 00 saniye</div>
     </div>
-    <p>Her geçen gün seni daha çok tanımak, daha çok sevmek istiyorum.</p>
+
+    <p>Her geçen gün seni daha çok seviyorum. 💕</p>
   </section>
 
   <section class="card">
     <h2>Kalbimden Sana 💌</h2>
+
     <div class="poem">Sen benim en güzel tesadüfüm,
 Kalbimde sakladığım en güzel düşüm.
 Dünümde sen, bugünümde sen,
@@ -159,44 +183,36 @@ Dünya değişse de değişmez yerin,
 Benim en güzel yanım sensin.
 
 Bin ömür verseler yine seni seçerim,
-Her sabah yeniden sana gelirim.
-Bir ömür değil, bin ömür olsa,
-Kalbim her defasında seni bulsa. ❤️
-
-İyi ki varsın sevgilim,
-İyi ki hayatıma geldin.
-Seninle nice güzel günlere,
-El ele, kalp kalbe... 💕</div>
+Her sabah yeniden seni severim.
+İyi ki varsın, iyi ki benimlesin,
+Kalbimin en güzel hikâyesisin. ❤️</div>
   </section>
 
   <section class="card">
     <h2>Bizden Hatıralar 📸</h2>
-    <p>Birlikte yaşadığımız en güzel anılar...</p>
+    <p>En güzel anılarımız burada ❤️</p>
 
     <div class="photos">
-      <img src="biz1.jpg" alt="Birinci hatıramız">
-      <img src="biz2.jpg" alt="İkinci hatıramız">
-      <img src="biz3.jpg" alt="Üçüncü hatıramız">
-      <img src="biz4.jpg" alt="Dördüncü hatıramız">
+      <img src="biz1.jpg" alt="Birinci fotoğraf">
+      <img src="biz2.jpg" alt="İkinci fotoğraf">
+      <img src="biz3.jpg" alt="Üçüncü fotoğraf">
     </div>
   </section>
 
   <section class="card">
-    <h2>Sana Bir Sözüm Var 💍</h2>
-    <div class="poem">Her gün seni dinlemek,
-Mutluluğunu paylaşmak,
-Zor günlerinde yanında olmak
-ve birlikte güzel anılar biriktirmek istiyorum.
+    <h2>Sana Sözüm Var 💗</h2>
 
-İyi ki benimlesin.
+    <div class="poem">Güzel günlerimizi birlikte çoğaltmak,
+Birbirimizi dinlemek ve anlamak,
+Her gün yeni bir anı biriktirmek
+istiyorum seninle.
+
 İyi ki biz olmuşuz.
-Seni hayatımdaki yerin için seviyorum. ❤️</div>
+İyi ki hayatımdasın.
+Seni seviyorum. ❤️</div>
   </section>
 
-  <footer>
-    Bir ömür boyu, her gün yeniden sen. ❤️
-  </footer>
-
+  <footer>Bir ömür boyu, her gün yeniden sen. ❤️</footer>
 </main>
 
 <script>
@@ -216,47 +232,47 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
   }
 });
 
-// Şimdilik 730 gün önceyi başlangıç alır.
-// Gerçek ilişkinizin başlangıç tarihini daha sonra ayarlayabiliriz.
+// Sayaç şimdilik 730 gün öncesinden başlar.
 const startDate = new Date();
-startDate.setHours(0, 0, 0, 0);
-startDate.setDate(startDate.getDate() - 730);
+startDate.setHours(0,0,0,0);
+startDate.setDate(startDate.getDate()-730);
 
 function updateCounter() {
-  const elapsed = Math.max(0, Date.now() - startDate.getTime());
-  const seconds = Math.floor(elapsed / 1000);
+  const elapsed = Math.max(0,Date.now()-startDate.getTime());
+  const total = Math.floor(elapsed/1000);
 
-  const days = Math.floor(seconds / 86400);
-  const hours = Math.floor((seconds % 86400) / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const secs = seconds % 60;
+  const days = Math.floor(total/86400);
+  const hours = Math.floor((total%86400)/3600);
+  const minutes = Math.floor((total%3600)/60);
+  const seconds = total%60;
 
   document.getElementById("days").textContent =
-    days + " gündür beraberiz ❤️";
+    days+" gündür beraberiz ❤️";
 
   document.getElementById("clock").textContent =
-    hours + " saat " + minutes + " dakika " + secs + " saniye";
+    hours+" saat "+minutes+" dakika "+seconds+" saniye";
 }
 
-setInterval(updateCounter, 1000);
+setInterval(updateCounter,1000);
 
 let heartTimer;
 
 function startHearts() {
   if (heartTimer) return;
 
-  heartTimer = setInterval(() => {
+  heartTimer = setInterval(function() {
     const heart = document.createElement("div");
     heart.className = "heart";
     heart.textContent = ["❤️","💕","💗","💖"][
-      Math.floor(Math.random() * 4)
+      Math.floor(Math.random()*4)
     ];
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (18 + Math.random() * 20) + "px";
 
+    heart.style.left = Math.random()*100+"vw";
+    heart.style.fontSize = (18+Math.random()*20)+"px";
     document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 6000);
-  }, 500);
+
+    setTimeout(()=>heart.remove(),6000);
+  },500);
 }
 </script>
 
